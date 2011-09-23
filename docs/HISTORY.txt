@@ -4,7 +4,7 @@ Changelog
 0.6.0a (Unreleased)
 -------------------
 
-Now this product depends on `Maps`__
+Now this product depends on `Maps`__ (and the code is now on the collective).
 
 __ http://plone.org/products/maps
 
@@ -31,7 +31,7 @@ __ http://plone.org/products/maps
 0.5.0 (2011-08-25)
 ------------------
 
-First public release
+First public release.
 
 * unified permissions name [keul]
 * map enable/disable was not properly protected [keul]
