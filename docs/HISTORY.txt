@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.6.0a (Unreleased)
+0.6.0a (2011-09-23)
 -------------------
 
 Now this product depends on `Maps`__ (and the code is now on the collective).
