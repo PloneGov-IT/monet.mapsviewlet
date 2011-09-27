@@ -36,5 +36,15 @@
         sortkey="1"
         profile="monet.mapsviewlet:default"
     />
+  <gs:upgradeStep
+        title="Upgrade to version 0.6.1"
+        description="Migrates Monet Maps Viewlet to version 0.6.1"
+        source="1600"
+        destination="1601"
+        handler=".setuphandlers.migrateTo061"
+        sortkey="2"
+        profile="monet.mapsviewlet:default"
+    />
+
 
 </configure>

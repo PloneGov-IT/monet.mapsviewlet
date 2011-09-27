@@ -80,6 +80,29 @@ class TestMap(base.FunctionalTestCase):
         self.assertTrue('<span style="display:none" id="gmaps-location">44.844, 12.113</span>' in page())
         self.assertTrue('<span style="display:none" id="gmaps-official-location"></span>' in page())
 
+    def test_enableMapLink(self):
+        """Test that enable map link always refer to the object URL"""
+        self.login('contributor1')
+        page = self.createPage('p1')
+        self.goTo(page)
+        self.assertTrue('%s/@@monet.gmap/enable' % page.absolute_url() in page())
+        self.portal.invokeFactory('Folder', 'foo-folder')
+        folder = self.portal['foo-folder']
+        otherpage = self.createPage('p2', folder)
+        self.goTo(otherpage)
+        self.assertTrue('%s/@@monet.gmap/enable' % otherpage.absolute_url() in otherpage())
+
+    def test_enableMapLinkForDefaultPage(self):
+        """Test that enable map link works also for default page in folder"""
+        self.login('contributor1')
+        self.portal.invokeFactory('Folder', 'foo-folder')
+        folder = self.portal['foo-folder']
+        page = self.createPage('p1', folder)
+        folder.setDefaultPage(page.getId())
+        self.goTo(folder)
+        self.assertFalse('%s/@@monet.gmap/enable' % folder.absolute_url() in folder.p1())
+        self.assertTrue('%s/@@monet.gmap/enable' % page.absolute_url() in folder.p1())
+
 
 def test_suite():
     suite = unittest.TestSuite()

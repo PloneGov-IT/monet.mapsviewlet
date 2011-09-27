@@ -2,6 +2,7 @@
 
 import unittest
 from monet.mapsviewlet.tests import base
+from AccessControl import Unauthorized 
 
 from zope.interface import alsoProvides
 from monet.mapsviewlet.interfaces import IMonetMapsEnabledContent
@@ -41,6 +42,11 @@ class TestPermissions(base.FunctionalTestCase):
         self.assertFalse(page.restrictedTraverse('@@monet.gmap').canEnable())
         self.assertFalse(page.restrictedTraverse('@@monet.gmap').canDisable())
         
+    def test_cantDoubleEnableMap(self):
+        self.login('contributor1')
+        page = self.createPage('p1')
+        alsoProvides(page, IMonetMapsEnabledContent)
+        self.assertRaises(Unauthorized, page.restrictedTraverse('@@monet.gmap').enable)
 
 def test_suite():
     suite = unittest.TestSuite()

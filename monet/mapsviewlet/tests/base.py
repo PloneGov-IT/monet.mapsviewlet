@@ -95,14 +95,16 @@ class FunctionalTestCase(ptc.FunctionalTestCase):
         self.request = self.portal.REQUEST
 
     def goTo(self, context):
+        self.request = context.REQUEST
         self.request.set('ACTUAL_URL', context.absolute_url())
-        #self.request.set('VIRTUAL_URL', '')
-        #self.request.set('URL', '')
+        self.request.set('VIRTUAL_URL', context.absolute_url())
+        self.request.set('URL', context.absolute_url())
 
-
-    def createPage(self, name):
-        self.portal.invokeFactory(id=name, type_name='Document')
-        page = self.portal[name]
+    def createPage(self, name, folder=None):
+        if not folder:
+            folder = self.portal
+        folder.invokeFactory(id=name, type_name='Document')
+        page = folder[name]
         self.portal.portal_workflow.doActionFor(page, 'publish')
         return page
 

@@ -57,3 +57,10 @@ def migrateTo060(context):
         pass
     logger.info("Migrated to 0.6.0")
 
+
+def migrateTo061(context):
+    logger = logging.getLogger('monet.mapsviewlet')
+    setup_tool = getToolByName(context, 'portal_setup')
+    setup_tool.runImportStepFromProfile('profile-monet.mapsviewlet:default', 'actions')
+    logger.info("Migrated to 0.6.1")
+

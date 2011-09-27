@@ -115,12 +115,12 @@ class TestRenderer(base.FunctionalTestCase):
         r = self.getPortletRenderer()
         self.assertFalse(r.available)
 
-    def test_ShowWhenHaveRelatedKML(self):
+    def test_showWhenHaveRelatedKML(self):
         self.addRelated(self.page, 'file1.kml', 'manual.doc')
         r = self.getPortletRenderer()
         self.assertTrue(r.available)
         
-    def test_ShowOnlyKMLInPortlet(self):
+    def test_showOnlyKMLInPortlet(self):
         self.addRelated(self.page, 'file1.kml', 'manual.doc', 'file3.kml')
         r = self.getPortletRenderer()
         output = r.render()

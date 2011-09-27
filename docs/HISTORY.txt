@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.6.1a (Unreleased)
+-------------------
+
+* fixed a bug that raise error if enabling/disabling map on default page in a folder [keul]
+* some more tests [keul] 
+
 0.6.0a (2011-09-23)
 -------------------
 

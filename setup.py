@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.6.0a'
+version = '0.6.1a'
 
 setup(name='monet.mapsviewlet',
       version=version,
