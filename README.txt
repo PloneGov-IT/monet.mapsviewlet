@@ -77,7 +77,7 @@ single KML data from the map. The portlet must be enabled where you prefer like 
 Other dependencies
 ==================
 
-Tested on Plone 3.2, 3.3 and 4.1 with `Products.Maps 2.1.1`__
+Tested on Plone 3.3 and 4.1 with `Products.Maps 2.1.1`__
 
 __ http://plone.org/products/maps/releases/2.1.1
 
