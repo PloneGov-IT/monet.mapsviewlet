@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.6.1a'
+version = '0.6.1'
 
 setup(name='monet.mapsviewlet',
       version=version,
@@ -16,7 +16,7 @@ setup(name='monet.mapsviewlet',
         "Framework :: Plone",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Topic :: Scientific/Engineering :: GIS",
         ],
       keywords='plone monet google maps plonegov kml',

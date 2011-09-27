@@ -87,7 +87,7 @@ TODO and know issues
 * think about moving KML files away from using related contents and into the new geolocation fieldset
 * make the *Products.Maps* dependency optional while keeping all other features
 * find a more elegant way to fix `issue #35 of Maps`__ 
-* find how to fix a `bug for using the LocationWidget on Firefox`__ (see also `Maps issue #35`__)
+* find how to fix a `bug for using the LocationWidget on Firefox`__ (see also `Maps issue #36`__)
 * some geolocation fieldset's elements are not translable (seems they are using the ``plone`` domain)
 
 __ http://plone.org/products/maps/issues/35
