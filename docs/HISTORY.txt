@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.6.2 (Unreleased)
+------------------
+
+* registering the view only for the ``IViewView``, not trying to
+  render it when in other views [keul]
+
 0.6.1 (2011-09-27)
 ------------------
 

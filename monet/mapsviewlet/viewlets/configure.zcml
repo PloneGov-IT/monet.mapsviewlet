@@ -5,11 +5,11 @@
 
   <browser:viewlet
      name="plone.monetmap"
-	 for="..interfaces.IMonetMapsEnabledContent"
+     for="..interfaces.IMonetMapsEnabledContent"
+     view="plone.app.layout.globals.interfaces.IViewView"
      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
      permission="zope2.View"
      class=".maps_viewlet.GMapViewlet"
-
      />  
 
 </configure>
