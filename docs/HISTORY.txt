@@ -1,6 +1,15 @@
 Changelog
 =========
 
+0.6.3 (unreleased)
+------------------
+
+* french translation
+  [laulaz]
+
+* fix action  icons links
+  [ale-rt]
+
 0.6.2 (2012-01-04)
 ------------------
 
@@ -11,7 +20,7 @@ Changelog
 ------------------
 
 * fixed a bug that raise error if enabling/disabling map on default page in a folder [keul]
-* some more tests [keul] 
+* some more tests [keul]
 
 0.6.0a (2011-09-23)
 -------------------
